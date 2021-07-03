@@ -32,6 +32,29 @@ class ProvidedPinBoxDecoration {
         borderRadius: BorderRadius.circular(radius));
   };
 
+  /// BoxShadow BoxDecoration
+  static PinBoxDecoration boxShadowPinBoxDecoration = (
+    Color borderColor,
+    Color pinBoxColor, {
+    double borderWidth = 2.0,
+    double radius = 5.0,
+  }) {
+    return BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            blurRadius: 12,
+            spreadRadius: 6,
+          ),
+        ],
+        border: Border.all(
+          color: borderColor,
+          width: borderWidth,
+        ),
+        color: pinBoxColor,
+        borderRadius: BorderRadius.circular(radius));
+  };
+
   /// Underlined BoxDecoration
   static PinBoxDecoration underlinedPinBoxDecoration = (Color borderColor,
       Color pinBoxColor, {
